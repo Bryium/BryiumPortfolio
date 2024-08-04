@@ -14,10 +14,5 @@
       "src": "/(.*)",
       "dest": "BryiumPortfolio/wsgi.pyy"
     }
-  ],
-  "functions": {
-    "api/**.py": {
-      "runtime": "python3.10.13"
-    }
-  }
+  ]
 }
