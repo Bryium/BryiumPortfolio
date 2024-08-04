@@ -13,10 +13,5 @@ from django.core.wsgi import get_wsgi_application
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'BryiumPortfolio.settings')
 
 application = get_wsgi_application()
-try:
-    application = get_wsgi_application()
-except Exception as e:
-    # Log the exception or handle it appropriately
-    import traceback
-    traceback.print_exc()
-    raise
+
+app = application
