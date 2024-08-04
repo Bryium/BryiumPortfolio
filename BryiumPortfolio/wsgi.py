@@ -8,7 +8,6 @@ https://docs.djangoproject.com/en/4.1/howto/deployment/wsgi/
 """
 
 import os
-
 from django.core.wsgi import get_wsgi_application
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'BryiumPortfolio.settings')
@@ -17,6 +16,6 @@ try:
     application = get_wsgi_application()
 except Exception as e:
     # Log the exception or handle it appropriately
-    print(f"Error initializing WSGI application: {e}")
-    # Optionally, you can exit the process or handle the error differently
+    import traceback
+    traceback.print_exc()
     raise
