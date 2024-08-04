@@ -1,18 +1,18 @@
 {
-  "version": 2,
   "builds": [
     {
       "src": "BryiumPortfolio/wsgi.py",
       "use": "@vercel/python",
       "config": {
-        "maxLambdaSize": "50mb"
+        "maxLambdaSize": "15mb",
+        "runtime": "python3.10.13"
       }
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "BryiumPortfolio/wsgi.pyy"
+      "dest": "BryiumPortfolio/wsgi.py"
     }
   ]
 }
