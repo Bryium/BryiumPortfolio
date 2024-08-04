@@ -11,6 +11,13 @@
   ],
   "routes": [
     {
+      "src": "/static/(.*)",
+      "dest": "/staticfiles/$1",
+      "headers": {
+        "cache-control": "max-age=31536000"
+      }
+    },
+    {
       "src": "/(.*)",
       "dest": "BryiumPortfolio/wsgi.py"
     }
