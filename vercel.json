@@ -21,10 +21,5 @@
       "src": "/(.*)",
       "dest": "BryiumPortfolio/wsgi.py"
     }
-  ],
-  "functions": {
-    "api/**.py": {
-      "maxDuration": 10
-    }
-  }
+  ]
 }
