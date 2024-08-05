@@ -1,5 +1,14 @@
 {
   "version": 2,
+  "builds": [
+    {
+      "src": "BryiumPortfolio/wsgi.py",
+      "use": "@vercel/python",
+      "config": {
+        "maxLambdaSize": "50mb"
+      }
+    }
+  ],
   "routes": [
     {
       "src": "/static/(.*)",
@@ -12,5 +21,10 @@
       "src": "/(.*)",
       "dest": "BryiumPortfolio/wsgi.py"
     }
-  ]
+  ],
+  "functions": {
+    "api/**.py": {
+      "maxDuration": 10
+    }
+  }
 }
