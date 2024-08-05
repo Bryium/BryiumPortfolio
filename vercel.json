@@ -1,16 +1,15 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "BryiumPortfolio/wsgi.py",
-      "use": "@vercel/python"
+  "functions": {
+    "BryiumPortfolio/wsgi.py": {
+      "runtime": "@vercel/python",
+      "maxDuration": 10
     }
-  ],
+  },
   "routes": [
     {
       "src": "/static/(.*)",
       "dest": "/staticfiles/$1"
-
     },
     {
       "src": "/(.*)",
