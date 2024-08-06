@@ -1,19 +1,18 @@
 {
-  "version": 2,
-  "functions": {
-    "api/wsgi.py": {
-      "runtime": "@vercel/python@3.10.13",
-      "maxDuration": 10
+  "builds": [
+    {
+      "src": "BryiumPortfolio/wsgi.py",
+      "use": "@vercel/python",
+      "config": {
+        "maxLambdaSize": "15mb",
+        "runtime": "python3.12"
+      }
     }
-  },
+  ],
   "routes": [
     {
-      "src": "/static/(.*)",
-      "dest": "/staticfiles/$1"
-    },
-    {
       "src": "/(.*)",
-      "dest": "api/wsgi.py"
+      "dest": "BryiumPortfolio/wsgi.py"
     }
   ]
 }
