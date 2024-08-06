@@ -1,7 +1,7 @@
 {
   "version": 2,
   "functions": {
-    "BryiumPortfolio/wsgi.py": {
+    "api/BryiumPortfolio/wsgi.py": {
       "runtime": "@vercel/python@3.10.13",
       "maxDuration": 10
     }
