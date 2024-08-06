@@ -10,10 +10,10 @@
 
     {% load static %}
     {# Main CSS #}
-    <link rel="stylesheet" href="{% staticfiles 'style.css' %}"/>
+    <link rel="stylesheet" href="{% static 'style.css' %}"/>
     
     {# Mobile responsive #}
-    <link rel="stylesheet" href="{% staticfiles 'media queries.css' %}"/>
+    <link rel="stylesheet" href="{% static 'media queries.css' %}"/>
     
     {# favicon.ico  #}
 
@@ -60,14 +60,14 @@
 {% load static %}
 <section id="profile">
     <div class="section_pic-container">
-        <img src="{% staticfiles 'assets/profile-pic.jpg' %}" alt="Bryium Onyancha profile picture" class="profile-pic">
+        <img src="{% static 'assets/profile-pic.jpg' %}" alt="Bryium Onyancha profile picture" class="profile-pic">
     </div>
     <div class="section_text">
         <p class="section_text_p1">Hello, I'm</p>
         <h1 class="title">Bryium Onyancha</h1>
         <p class="section_text_p2">Software Engineer </p>
         <div class="btn-container">
-            <button class="btn btn-color-2" onclick="window.open('{% staticfiles 'assets/Resume.pdf' %}')">
+            <button class="btn btn-color-2" onclick="window.open('{% static 'assets/Resume.pdf' %}')">
                 Download CV
             </button>
             <button class="btn btn-color-1" onclick="location.href='#contact'">
@@ -91,7 +91,7 @@
     <h1 class="title">About Me</h1>
     <div class="section-container">
         <div class="section__pic-container">
-            <img src="{% staticfiles 'assets/about-pic.jpg' %}" alt="profile picture" class="about-pic">
+            <img src="{% static 'assets/about-pic.jpg' %}" alt="profile picture" class="about-pic">
         </div>
         <div class="about-details-container">
             <div class="about-containers">
@@ -336,7 +336,7 @@
 </footer>
 
 
-<script src="{% staticfiles 'script.js' %}"></script>
+<script src="{% static 'script.js' %}"></script>
 </body>
 
 </html>
